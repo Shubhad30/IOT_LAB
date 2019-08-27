@@ -1,0 +1,14 @@
+int p1=2;
+int lp=10;
+void setup()
+{
+  pinMode(p1,INPUT);
+  pinMode(lp,OUTPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+  int sv=digitalRead(p1);
+  Serial.println(sv);
+  digitalWrite(lp,sv);
+}
